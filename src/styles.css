@@ -1,0 +1,94 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  background: #6894ce;
+}
+
+.container {
+  background: transparent;
+  max-width: 700px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.code-editor:before,
+.code-editor span.control:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+}
+
+.code-editor {
+  position: relative;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: left;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.code-editor:before {
+  background-color: #fafafa;
+  border-radius: 5px 5px 0 0;
+  top: 0px;
+  height: 25px;
+  width: 100%;
+}
+
+.code-editor span.control:before {
+  content: "";
+  top: 8px;
+  z-index: 100;
+  padding: 4px;
+  border-radius: 100%;
+}
+
+span.close:before {
+  margin-left: 15px;
+  background-color: #df6963;
+}
+
+span.min:before {
+  margin-left: 35px;
+  background-color: #f5e18a;
+}
+
+span.max:before {
+  margin-left: 55px;
+  background-color: #97c38a;
+}
+
+pre {
+  margin: 0;
+}
+
+code {
+  padding-top: 36px !important;
+  padding-bottom: 18px !important;
+  min-width: 360px;
+  max-width: 700px;
+}
+
+.actions {
+  text-align: right;
+  margin: 16px 0 12px 0;
+}
+
+select {
+  border: none;
+  height: 28px;
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-left: 6px;
+}
+
+button {
+  border-radius: 5px;
+  background: #fafafa;
+  border: none;
+  padding: 6px 8px;
+}

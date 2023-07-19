@@ -63,10 +63,14 @@ span.max:before {
 }
 
 pre {
+  position: relative;
   margin: 0;
+  white-space: break-spaces;
+  word-wrap: break-word;
 }
 
-code {
+code, textarea {
+  padding: 16px !important;
   padding-top: 36px !important;
   padding-bottom: 18px !important;
   min-width: 360px;
@@ -91,4 +95,23 @@ button {
   background: #fafafa;
   border: none;
   padding: 6px 8px;
+}
+
+textarea {
+  position: absolute;
+  background: transparent;
+  color: transparent;
+  caret-color: #aad3f9;
+  top: 0;
+  height: calc(100% - 54px);
+  width: calc(100% - 26px);
+  border: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.code-text {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 20px;
 }

@@ -7,29 +7,21 @@ import { Window } from "./Window";
 import { DEFAULT_CODE } from "./constants";
 
 export default function App() {
-  const [language, setLanguage] = useState<string>("Python");
+  const [language, setLanguage] = useState<string>("py");
   const [code, setCode] = useState(DEFAULT_CODE);
 
   useEffect(() => {
     hljs.highlightAll();
   }, [language, code]);
 
-  const codeRef = useRef<HTMLElement>(null);
-
-  const handleCodeChange = () => {
-    const codeContent = (codeRef.current as any)?.textContent || "";
-    setCode(codeContent);
-  };
-
   return (
     <div className="App">
       <div className="container">
         <Actions language={language} setLanguage={setLanguage} />
         <Window
-          ref={codeRef}
           language={language}
           code={code}
-          handleCodeChange={handleCodeChange}
+          onCodeChange={setCode}
         />
       </div>
     </div>

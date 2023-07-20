@@ -3,7 +3,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/github-dark-dimmed.css";
 import "./styles.css";
 import { Actions } from "./Actions";
-import { Window } from "./Window";
+import { CodeEditor } from "./CodeEditor";
 import { DEFAULT_CODE, DEFAULT_LANGUAGE } from "./constants";
 import { Option } from "./types";
 
@@ -19,7 +19,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Actions language={language} setLanguage={setLanguage} />
-        <Window
+        <CodeEditor
           language={language}
           code={code}
           onCodeChange={setCode}

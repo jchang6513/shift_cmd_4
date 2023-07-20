@@ -7,7 +7,7 @@ type Props = {
   onCodeChange: (s: string) => void;
 }
 
-export const Window = (props: Props) => {
+export const CodeEditor = (props: Props) => {
   const { language, code, onCodeChange } = props;
 
   return (

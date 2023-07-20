@@ -4,14 +4,27 @@
 }
 
 body {
-  background: #6894ce;
+  background: rgb(35, 35, 35)
 }
 
 .container {
   background: transparent;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   width: fit-content;
+}
+
+h1 {
+  color: white;
+  font-weight: bolder;
+  font-size: 56px;
+  margin-bottom: 48px;
+}
+
+.desktop {
+  background: rgb(143, 228, 250);
+  box-shadow: rgba(255, 255, 255, 0.24) 0px 10px 20px;
+  padding: 60px;
 }
 
 .code-editor:before,
@@ -69,6 +82,12 @@ pre {
   word-wrap: break-word;
 }
 
+code {
+  background-color: white;
+  display: block;
+  overflow-x: auto;
+}
+
 code, textarea {
   padding: 16px !important;
   padding-top: 36px !important;
@@ -80,10 +99,10 @@ code, textarea {
 .actions {
   display: flex;
   justify-content: flex-end;
-  margin: 16px 0 12px 0;
+  margin: 16px 0 20px 0;
 }
 
-.actions .language-selector {
+.actions .selector {
   flex: 0 0 200px;
   margin-right: 16px;
   text-align: left;

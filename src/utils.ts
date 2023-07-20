@@ -1,7 +1,7 @@
-import domtoimage from "dom-to-image";
+import domToImage from "dom-to-image";
 
 export const nodeToImage = (node: HTMLElement, scale: number) => {
-  domtoimage
+  domToImage
     .toPng(node, {
       quality: 1,
       cacheBust: true,
@@ -28,4 +28,15 @@ export const nodeToImage = (node: HTMLElement, scale: number) => {
     .catch((error) => {
       console.error("Error capturing the image:", error);
     });
+}
+
+export const toggleLink = (title: string, enable: boolean) => {
+  const link = document.querySelector(`link[title="${title}"]`)
+  if (!link) return
+
+  if (enable) {
+    link.removeAttribute("disabled");
+  } else {
+    link.setAttribute("disabled", "disabled");
+  }
 }

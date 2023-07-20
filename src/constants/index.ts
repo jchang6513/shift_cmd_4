@@ -1,21 +1,30 @@
-export const CODE_EDITOR_ID = 'code-editor'
+export const CAPTURE_DOM_ID = 'capture-dom'
 
 export const DEFAULT_CODE = `
-# Python program to display all the prime numbers within an interval
+import * as React from 'react';
+import './App.css';
 
-lower = 900
-upper = 1000
+import logo from './logo.svg';
 
-print("Prime numbers between", lower, "and", upper, "are:")
+class App extends React.Component {
+  public render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.tsx</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
+}
 
-for num in range(lower, upper + 1):
-   # all prime numbers are greater than 1
-   if num > 1:
-       for i in range(2, num):
-           if (num % i) == 0:
-               break
-       else:
-           print(num)
+export default App;
 `;
 
 export * from './language'
+
+export * from './theme'

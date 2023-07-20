@@ -1,4 +1,3 @@
-import { CODE_EDITOR_ID } from "./constants";
 import { Option } from "./types";
 
 type Props = {
@@ -11,7 +10,7 @@ export const CodeEditor = (props: Props) => {
   const { language, code, onCodeChange } = props;
 
   return (
-    <div id={CODE_EDITOR_ID} className="code-editor">
+    <div className="code-editor">
       <span className="control close"></span>
       <span className="control min"></span>
       <span className="control max"></span>

@@ -1,3 +1,5 @@
+export const CODE_EDITOR_ID = 'code-editor'
+
 export const DEFAULT_CODE = `
 # Python program to display all the prime numbers within an interval
 
@@ -15,3 +17,5 @@ for num in range(lower, upper + 1):
        else:
            print(num)
 `;
+
+export * from './language'

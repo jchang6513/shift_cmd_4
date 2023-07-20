@@ -78,8 +78,16 @@ code, textarea {
 }
 
 .actions {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
   margin: 16px 0 12px 0;
+}
+
+.actions .language-selector {
+  flex: 0 0 200px;
+  margin-right: 16px;
+  text-align: left;
+  z-index: 1000;
 }
 
 select {

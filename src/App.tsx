@@ -4,10 +4,11 @@ import "highlight.js/styles/github-dark-dimmed.css";
 import "./styles.css";
 import { Actions } from "./Actions";
 import { Window } from "./Window";
-import { DEFAULT_CODE } from "./constants";
+import { DEFAULT_CODE, DEFAULT_LANGUAGE } from "./constants";
+import { Option } from "./types";
 
 export default function App() {
-  const [language, setLanguage] = useState<string>("py");
+  const [language, setLanguage] = useState<Option>(DEFAULT_LANGUAGE);
   const [code, setCode] = useState(DEFAULT_CODE);
 
   useEffect(() => {

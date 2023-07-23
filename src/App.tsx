@@ -33,14 +33,8 @@ export default function App() {
 
   return (
     <div className="App">
+      <h1>shift+cmd+4</h1>
       <div className="container">
-        <h1>shift+cmd+4</h1>
-        <Actions
-          language={language}
-          theme={theme}
-          setLanguage={setLanguage}
-          setTheme={setTheme}
-        />
         <div id={CAPTURE_DOM_ID} className="desktop">
           <CodeEditor
             language={language}
@@ -48,6 +42,15 @@ export default function App() {
             onCodeChange={setCode}
           />
         </div>
+        <Actions
+          language={language}
+          theme={theme}
+          setLanguage={setLanguage}
+          setTheme={setTheme}
+        />
+      </div>
+      <div className="footer">
+        created by <a href="https://github.com/jchang6513/shift_cmd_4" target="_blank">jchang6513</a>
       </div>
     </div>
   );

@@ -4,27 +4,33 @@
 }
 
 body {
-  background: rgb(35, 35, 35)
-}
-
-.container {
-  background: transparent;
-  max-width: 800px;
-  margin: 0 auto;
-  width: fit-content;
+  background: black;
 }
 
 h1 {
   color: white;
-  font-weight: bolder;
-  font-size: 56px;
-  margin-bottom: 48px;
+  font-family: 'Shrikhand', cursive;
+  font-size: 72px;
+  margin-bottom: 24px;
+  background: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  background: transparent;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 36px auto 48px;
+  padding: 24px;
+  width: fit-content;
 }
 
 .desktop {
-  background: rgb(143, 228, 250);
-  box-shadow: rgba(255, 255, 255, 0.24) 0px 10px 20px;
-  padding: 60px;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  padding: 48px;
 }
 
 .code-editor:before,
@@ -45,7 +51,6 @@ h1 {
 }
 
 .code-editor:before {
-  background-color: #fafafa;
   border-radius: 5px 5px 0 0;
   top: 0px;
   height: 25px;
@@ -99,7 +104,7 @@ code, textarea {
 .actions {
   display: flex;
   justify-content: flex-end;
-  margin: 16px 0 20px 0;
+  margin: 24px 0 0 0;
 }
 
 .actions .selector {
@@ -107,6 +112,19 @@ code, textarea {
   margin-right: 16px;
   text-align: left;
   z-index: 1000;
+}
+
+.selector-icon {
+  background: black;
+  border: 2px solid white;
+  border-radius: 6px 0 0 6px;
+  padding: 7px 8px 6px;
+  margin-right: -2px;
+  height: 23px;
+}
+.selector-icon img {
+  height: 22px;
+  filter: invert(1);
 }
 
 select {
@@ -118,10 +136,12 @@ select {
 }
 
 button {
+  background: black;
+  border: 2px solid white;
   border-radius: 5px;
-  background: #fafafa;
-  border: none;
-  padding: 6px 8px;
+  color: white;
+  cursor: pointer;
+  padding: 4px 12px;
 }
 
 textarea {
@@ -141,4 +161,14 @@ textarea {
   font-family: monospace;
   font-size: 14px;
   line-height: 20px;
+}
+
+.footer {
+  font-size: 14px;
+  color: rgba(241, 241, 241, 0.908);
+  margin-top: 32px;
+}
+
+.footer a {
+  color: rgba(241, 241, 241, 0.908);
 }

@@ -156,6 +156,7 @@ textarea {
   width: calc(100% - 26px);
   border: none;
   resize: none;
+  outline: none;
   overflow: hidden;
 }
 

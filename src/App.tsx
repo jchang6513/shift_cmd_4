@@ -1,18 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import hljs from "highlight.js";
 import "./styles.css";
 import { Actions } from "./Actions";
 import { CodeEditor } from "./CodeEditor";
-import { CAPTURE_DOM_ID, DEFAULT_CODE, DEFAULT_LANGUAGE, DEFAULT_THEME } from "./constants";
+import { CAPTURE_DOM_ID, DEFAULT_LANGUAGE, DEFAULT_THEME } from "./constants";
 import { Option } from "./types";
 import { toggleLink } from "./utils";
+import { useParams } from "./useParams";
 
 export default function App() {
-  const [language, setLanguage] = useState<Option>(DEFAULT_LANGUAGE);
-  const [theme, setTheme] = useState<Option>(DEFAULT_THEME);
   const prevTheme = useRef<Option>()
-  const [code, setCode] = useState(DEFAULT_CODE);
+  const { code, setCode, language = DEFAULT_LANGUAGE, setLanguage, theme = DEFAULT_THEME, setTheme } = useParams()
 
   useEffect(() => {
     if (theme.value !== prevTheme.current?.value) {

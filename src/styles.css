@@ -48,6 +48,7 @@ h1 {
   text-align: left;
   overflow: hidden;
   width: fit-content;
+  min-width: 600px;
 }
 
 .code-editor:before {
@@ -91,6 +92,7 @@ code {
   background-color: white;
   display: block;
   overflow-x: auto;
+  min-height: 50px;
 }
 
 code, textarea {
